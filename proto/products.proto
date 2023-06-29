@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/Rayato159/stupid-grpc";
+
+message ProductRes {
+    int32 id = 1;
+    string title = 2;
+}
+
+message ProductReq {
+    int32 id = 1;
+}
+
+service Transfer {
+    rpc FindOneProduct (ProductReq) returns (ProductRes) {}
+}
